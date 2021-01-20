@@ -1,0 +1,83 @@
+ALGORITHM Checkpoint algo 1/2 P1
+VAR
+    set1,set2: ARRAY_OF INTEGER[];
+    i,j,n1,n2,sum: INTEGER;
+    
+BEGIN
+    Write('entrer la longeur de set1',n1);
+    Write('entrer la longueur de set2',n2);
+    Write('entret la premiere set',set1);
+    Read(set1);
+    Write('entret la deuxieme set',set2);
+    Read(set2);
+    FOR i FROM 0 TO set1.length STEP 1  DO
+        j:=0;
+
+        WHILE (set1[i]<>set2[j] and j<set2.length) DO
+            j:=j+1;
+        END_WHILE
+        IF (j :=set2.length) THEN
+            sum := sum +set1[i];
+            END_IF
+        END_WHILE
+
+    FOR j FROM 0 TO set2.length STEP 1  DO
+        
+        WHILE(set2[j]<>set1[i] and i< sent1.length) DO
+            i := i+1; 
+        END_WHILE
+        IF (i := set1.length)
+            sim := sum+set2[j];
+            END_IF
+    END_FOR
+END
+ALGORITHM Checkpoint algo 2/2 P1
+VAR 
+    htab : Hash_Table<INTEGER,INTEGER>;
+    arr1 :ARRAY_OF INTEGER[5];
+    arr2 :ARRAY_OF INTEGER[5]; 
+    sum,count:INTEGER:=0;
+    i:INTEGER;
+
+BEGIN
+    FOR i FROM 0 TO arr2.length-1 STEP 1  DO
+        Write ("Enter the element from table 1 : ");
+        Read(arr1[i]);
+        Write("Enter the element from table 2 ");
+        Read(arr2[i]);
+    END_FOR
+
+    FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+        IF (htab.lookup(arr1[i])= TRUE ) THEN
+            count:=htab.get(arr1[i]);
+            htab.insert(arr1[i],count+1);
+            ELSE 
+                htab.insert(arr1[i],1);
+        END_IF
+
+        IF (htab.lookup(arr2[i])=TRUE) THEN
+            count:=htab.get(arr2[i]);
+            htab.insert(arr2[i],count+1);
+            ELSE
+                htab.insert(arr2[i],1);
+        END_IF
+    END_FOR
+
+    FOR i FROM 0 to arr1.length STEP 1 DO 
+        IF (htab.get(arr1<i)) THEN 
+            sum:=sum+arr1[i];
+        END_IF
+    END_FOR
+
+    Write("Sum of elements :",sum)
+END
+
+
+
+//probleme 2 ! 
+ALGORITHM checkpoint algo 1/2 P2 
+VAR
+    
+BEGIN
+    
+END
